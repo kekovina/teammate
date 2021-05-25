@@ -1,0 +1,53 @@
+@import "_vendor.scss";
+@import "_custom.scss";
+@import "~bootstrap/scss/bootstrap";
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-Light.ttf');
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-Regular.ttf');
+    font-weight: 500;
+}
+
+body{
+    background-color: #F6F6F6;
+    @include media-breakpoint-up(lg){
+        background-color: red;
+    }
+}
+
+header{
+    height: 60px;
+    padding: 19px 22px;
+}
+
+main{
+    margin-top: 20px;
+    margin-bottom: 60px;
+}
+
+header .header__logo{
+    width: 130px;
+    height: 25px;
+}
+
+.event-info{
+
+    @include make-col-ready();
+
+    @include make-col(12);
+
+    @include media-breakpoint-up(lg){
+        @include make-col(4);
+    }
+}
+.event-info.event-info--right{
+    @include media-breakpoint-up(lg){
+        @include make-col-offset(4)
+    }
+}
+
